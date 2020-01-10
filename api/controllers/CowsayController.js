@@ -6,7 +6,7 @@
  */
 
 var cowsay = require("cowsay");
-var kue = require("kue");
+// var kue = require("kue");
 var nodemailer = require("nodemailer");
 let queue = kue.createQueue();
 
