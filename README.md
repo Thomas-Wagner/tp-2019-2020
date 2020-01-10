@@ -4,6 +4,8 @@
 
 First time you're starting the application, install the dependencies:
 
+[![Build Status](https://github.com/Thomas-Wagner/tp-2019-2020)](https://github.com/Thomas-Wagner/tp-2019-2020)
+
 ```
 docker-compose run web npm install
 ```
@@ -33,4 +35,4 @@ terminal `docker restart web` and wait for the migrations to be executed.
 
 ### Resources
 
-+ [Sails framework documentation](https://sailsjs.com/get-started)
+- [Sails framework documentation](https://sailsjs.com/get-started)
