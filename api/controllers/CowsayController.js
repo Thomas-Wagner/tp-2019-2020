@@ -8,7 +8,7 @@
 var cowsay = require("cowsay");
 // var kue = require("kue");
 // var nodemailer = require("nodemailer");
-let queue = kue.createQueue();
+// let queue = kue.createQueue();
 
 module.exports = {
   /**
@@ -40,19 +40,20 @@ module.exports = {
 
   create: async function(req, res) {
     await Sentences.create({ sentence: req.param("sentence") });
-    var job = queue
-      .create("email", {
-        title: "Thanks !",
-        to: req.param("email"),
-        template: "Thanks"
-      })
-      .save(function(err) {
-        if (!err) console.log(job.id);
-      });
     return res.redirect("/say");
   }
 
-  // admin: async function(req, res) {},
+  // admin: async function(req, res) {
+  //   var job = queue
+  //   .create("email", {
+  //     title: "Thanks !",
+  //     to: req.param("email"),
+  //     template: "Thanks"
+  //   })
+  //   .save(function(err) {
+  //     if (!err) console.log(job.id);
+  //   });
+  // },
 
   // sendMail: async function(email) {
   //   // create reusable transporter object using the default SMTP transport
